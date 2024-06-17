@@ -26,6 +26,10 @@ let startQuiz = async () => {
         });
         if (ans.quiz == data[i].correct_answer) {
             ++score;
+            console.log(chalk.bold.italic.green("Correct"));
+        }
+        else {
+            console.log(`The Correct Answer is ${chalk.bold.italic.red(data[i].correct_answer)}`);
         }
     }
     console.log(`Dear ${chalk.green(name.fname)} Your score is: ` + score);

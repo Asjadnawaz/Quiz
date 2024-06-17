@@ -35,6 +35,9 @@ for (let i = 1; i < 6; i++){
     });
 if(ans.quiz == data[i].correct_answer) {
     ++score;
+    console.log(chalk.bold.italic.green("Correct"));
+} else {
+    console.log(`The Correct Answer is ${chalk.bold.italic.red(data[i].correct_answer)}`)
 }
 
 }
